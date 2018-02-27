@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
-script: 
-  - npm run lint
-  - npm test
-  - npm run build
+script:
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  app: nerdy-deploy
+  api_key:
+    secure: MdRHgWKXIK4klh7Mmrpc7WZvdDysrql7RBOvk3dOWgcd7Oj+/i799RLD+6YPHfrnoBJKV6f7GrkhGcoGZ76pquNWUmG5LJls71HrL5MtbugNF0P2ROMq+cAyIfq3DNzjYmafczEpcSY/ij3Zton5ryc/KpgNHxTzZeNCsq9xCz2sdvbdlxX0EzoFWuTvfTYZTBbZdJgjdjedJ5VrNDzMwiOE1OYEFfbECzfeiXNyfxZaHLeLu4JAtI/jgq7xyxji0VV7i9RuDrYLVZgNhE8KGM5iY50P35hErbxxl1GXnUpRm3rEdrkr/uQw3BavD4pPJLWstxh0ourPsfXmh9B+oCIrE2GCnjramDKpDvna7+XT3fNGz5JLMxbllznJs4wMftNu5aIEi0m+gnqm7kKHghUGnZeFNMcYoYiulT6FI7gAfXwI81AysF7TP2hV3becKdYT55lb742Sh5E0gMU6Ahs78H2/5GdEXNtJo6OMv7vmkPinSiLoXLdN7RD8Ot90HBX8X02s+E5LO9qUMfCOikPowntMLOmCcSF2wDeUA184F2Cq0Na8B5Kvf+fb72jovozg+H/xrxXTN9J7sWuehaGvy6voDwNM8QpuOtQ9QwSki68tlsZU/5+vOwsLDCplQnybhK6t84IariGE9oXm3EE3sKActUPwbY0FkAdI02E=
